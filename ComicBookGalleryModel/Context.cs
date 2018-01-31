@@ -15,7 +15,8 @@ namespace ComicBookGalleryModel
         {
             //Database.SetInitializer(new CreateDatabaseIfNotExists<Context>()); // default behaviour
             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
-            Database.SetInitializer(new DropCreateDatabaseAlways<Context>());
+            //Database.SetInitializer(new DropCreateDatabaseAlways<Context>());
+            Database.SetInitializer(new DatabaseInitializer());
 
             this.Configuration.LazyLoadingEnabled = false; // Turn off lazy loading for all entities
         } 
