@@ -17,6 +17,7 @@ namespace ComicBookGalleryModel.Models
         public int Id { get; set; }
         [Required, StringLength(100)]
         public string Title { get; set; }
+        //[CaseSensitive] // use the attribute, defined in OnModelCreating()
         public string Description { get; set; }
 
         public ICollection<ComicBook> ComicBooks { get; set; }
